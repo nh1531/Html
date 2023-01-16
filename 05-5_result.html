@@ -1,0 +1,146 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>설문작성</title>
+<link rel="stylesheet" type="text/css" href="style1.css">
+<style>
+    .prod-list {
+        list-style:none;
+        margin:0;
+        padding:0;
+    }
+    .prod-list li {
+        position: relative; /* 텍스트나 이미지를 원하는 위치로 배치 - 부모 요서에 자연스럽게 연결해 위치 지정. */
+        float: left;
+        padding: 0;
+        margin: 10px;
+        overflow: hidden;
+    }
+    .prod-list img {
+        margin:0;
+        padding:0;
+        float:left;
+        z-index:5;
+    }   
+    .prod-list .caption {
+        /* position: static; 요소를 문서의 흐름에 맞워 배치하는 방법 */
+        position: absolute;  /* 원하는 위치를 지정해서 배치 */
+        top:200px;   /* 위치 설정 */
+        width:300px;
+        height:200px;
+        padding-top:20px;
+        background:rgba(0,0,0,0.6);
+        opacity:0;
+        -moz-transition: all 0.2s ease-in-out;
+        -o-transition: all 0.2s ease-in-out;
+        -ms-transition: all 0.2s ease-in-out;
+        -webkit-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;  /* 애니메이션 스타일 속성 - 느이게 시작하고 빠르게 끝남. */
+        z-index:10;
+    }
+    .prod-list li:hover .caption {
+        opacity: 1;  /* 투명도 */
+        /* 각 브라우저의 하위 버전에서도 사용가능하도록 하기 위해 작성. */
+        /* 자연스러운 애니메이션 효과 */
+        -moz-transform: translateY(-200px);  /* 파이어 폭스 */
+        -ms-transform: translateY(-200px);   /* 익스플로러 9.0 */
+        -o-transform: translateY(-200px);    /* 오페라 */
+        -webkit-transform: translateY(-200px);  /* 크롬, 사파리 */
+        transform: translateY(-200px);  /* 애니메이션 시작 위치 */
+    }     
+    .caption h1, .caption p {
+        color: #fff;
+        text-align: center;
+        line-height: 0.8em;
+
+    }        
+    .caption p {
+        padding-left: 0px;
+    }
+    section {
+        height: auto;
+        border: 0px;
+        width: 80%;
+    }
+</style>
+</head>
+<body>
+    <header>
+        <div>
+            <img src="img/photo.png" alt="본인사진">
+        </div>
+        <div>
+            <h1>Kim ji Yeon</h1>
+            <p>김지연</p>   <!-- 추가 -->
+        </div>
+        
+    </header>
+    <nav>
+        <a href="05-3.html">[개인정보]</a>&nbsp;&nbsp;
+        <a href="05-3.html#s2">[학력사항]</a>&nbsp;&nbsp; 
+        <a href="05-3.html#s3">[자격사항]</a>&nbsp;&nbsp; 
+        <a href="05-3.html#s4">[자기소개]</a>&nbsp;&nbsp;  
+        <a href="05-4.html">[설문조사]</a>&nbsp;&nbsp;  
+        <a href="05-5.html">[신상품]</a>&nbsp;&nbsp;  
+    </nav>
+    <section>
+        <h1>신상품 목록</h1>
+        <div id="container">
+            <ul class="prod-list">
+                <li>
+                    <img src="img/prod1.jpg">
+                    <div class="caption">
+                        <h1>상품 1</h1>
+                        <p>상품 1 설명 텍스트</p>
+                        <p>가격 : 12,345원</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="img/prod2.jpg">
+                    <div class="caption">
+                        <h1>상품 2</h1>
+                        <p>상품 2 설명 텍스트</p>
+                        <p>가격 : 12,345원</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="img/prod3.jpg">
+                    <div class="caption">
+                        <h1>상품 3</h1>
+                        <p>상품 3 설명 텍스트</p>
+                        <p>가격 : 12,345원</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="img/prod1.jpg">
+                    <div class="caption">
+                        <h1>상품 4</h1>
+                        <p>상품 4 설명 텍스트</p>
+                        <p>가격 : 12,345원</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="img/prod2.jpg">
+                    <div class="caption">
+                        <h1>상품 5</h1>
+                        <p>상품 5 설명 텍스트</p>
+                        <p>가격 : 12,345원</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="img/prod3.jpg">
+                    <div class="caption">
+                        <h1>상품 6</h1>
+                        <p>상품 6 설명 텍스트</p>
+                        <p>가격 : 12,345원</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <br><br>
+    <footer>
+        &copy;본인 영문이름 본인 주소
+    </footer>
+</body>
+</html>

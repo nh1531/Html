@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form 태그 실습</title>
+
+    <style>
+        body{
+            padding: 20px;
+        }
+        /* height는 % 안됨 */
+        input[type=text], input[type=password], input[type=email], input[type=tel], input[type=number] {
+            width: 30%;
+            height: 50px; 
+            border: solid 1px green;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        label[for]{
+            color: red;
+            display: inline-block;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 입력 양식을 작성하는 태그 -->
+    <h1>Form 태그 실습</h1>
+
+    <form name="myForm" method="get" action="result.html">
+    <!-- 이름 입력 영역 -->
+    <div>
+        <!--label의 for는 id 랑 값이 같아야 함. 짝을 맞출 부분에 label 사용 -->
+        <!-- required 필수항목일 때 사용. 입력 안하고 확인버튼 누르면 입력하라고 뜸 -->
+        <label for="user_name">[이름] :</label>
+        <input type="text" name="user_name" id="user_name" placeholder="이름을 입력하세요." required>
+    </div>
+    <!--줄바꿈 br-->
+    <br><br>
+
+    <!-- 비밀번호 입력 영역 -->
+    <div>
+        <label for="user_pw">[비밀번호] : </label>
+        <input type="password" name="user_pw" id="user_pw" placeholder="비밀번호를 입력하세요."
+        maxlength="12" required>
+    </div>
+    <br><br>
+
+    <!-- 메일 주소 입력 영역 -->
+    <!-- autofocus 자동으로 포커스가 메일 주소칸에 있음. 보통은 제일 처음 입력칸에 있음 -->
+    <div>
+        <label for="user_mail">[E-Mail] : </label>
+        <input type="email" name="user_mail" id="user_mail" placeholder="메일 주소 입력" autofocus>
+    </div>
+    <br><br>
+
+    <!-- 학년 선택 영역 radio 버튼-->
+    <div>
+        [학년 선택] : 
+        <!-- name은 같아도 되지만 id는 달라야 함 -->
+        <!-- radio 버튼을 눌러야지만 선택됨 -->
+        <!-- 기본값으로 체크 해놓는것 checked -->
+        <input type="radio" name="grade" id="grade1" value="1학년" checked> 1학년
+        <input type="radio" name="grade" id="grade2" value="2학년"> 2학년
+
+        <!-- 3학년 글자 클릭해도 radio 버튼 선택됨 -> label로 묶음 -->
+        <input type="radio" name="grade" id="grade3" value="3학년"> 
+        <label for="grade3">3학년</label>
+        <input type="radio" name="grade" id="grade4" value="4학년"> 
+        <label for="grade4">4학년</label>
+    </div>
+    <br><br>
+
+
+    <!-- 신청 과목 선택 영역 - 체크박스 --> 
+    <div>
+        [신청 과목] :
+        <input type="checkbox" name="ck_java" id="ck_java" value="자바" checked>
+        <label for="ck_java">JAVA</label>
+        <input type="checkbox" name="ck_html" id="ck_html" value="웹제작" checked>
+        <label for="ck_html">HTML</label>
+        <input type="checkbox" name="ck_python" id="ck_python" value="파이썬">
+        <label for="ck_python">Python</label>
+        <input type="checkbox" name="ck_uiux" id="ck_uiux" value="UIUX">
+        <label for="ck_uiux">UI/UX</label>
+    </div>
+    <br><br>
+
+    <!-- 학년 선택 영역 - 셀렉트 -->
+    <label for="grade">[학년] : </label>
+    <select name="grade" id="grade">
+        <option value="1">1학년</option>
+        <option value="2">2학년</option>
+        <option value="3">3학년</option>
+        <!--selected 기본값으로 설정 -->
+        <option value="4" selected>4학년</option>
+    </select>
+    <br><br>
+
+    <!-- 전화번호 입력 영역 -->
+    <div>
+        <label for="user_tel">[전화번호] : </label> 
+        <input type="tel" name="user_tel" id="user_tel" placeholder="-기호를 빼고 입력하시오."
+    </div>
+    <br><br>
+
+    <!-- 숫자 입력 영역 -->
+    <div>
+        <label for="count">[인원수] : </label>
+        <!-- 상하 화살표 있어서 숫자 입력 가능 -->
+        <input type="number" name="count" id="count">명
+    </div>
+    <br><br>
+
+    <!-- 날짜 입력 영역 -->
+    <!-- 달력 뜸 -->
+    <label for="date">[제출일] : </label>
+    <input type="date" name="date" id="date">
+    <br><br>
+
+    <!-- 자기소개 영역 -->
+    <!-- cols 너비 rows 라인수-->
+    <div>
+        <label for="user_info">[자기 소개] : </label>
+        <textarea name="user_info" id="user_info" cols="50" rows="10"></textarea>
+    </div>
+    <br><br>
+
+    <!-- 버튼으로 네이버 연결 영역-->
+    <div>
+        <!-- 윈도우 새 창으로 열겠다 -->
+        <!-- value = 버튼에 나타나는 내용 -->
+        <input type="button" value="네이버 연결" onclick="javascript:window.open('http://www.naver.com')">
+    </div>
+    <br><br>
+
+    <!-- 확인 취소 버튼 영역-->
+    <!-- submit 버튼 누르면 상단의 result.html로 감 -->
+    <!-- submit이 <form> 태그 안에 있으면 action에서 지정한 페이지로 감 -->
+    <div>
+        <input type="submit" value="확인">
+        <input type="reset" value="취소">
+    </div>
+
+    </form>
+</body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <title>자기소개</title>
+
+        <!-- html 구조 순서대로 스타일 적용 -> 유지보수 할 때 찾기 쉬워야 함 -->
+        <!-- 외부 스타일 적용 -->
+        <link rel="stylesheet" type="text/css" href="style.css">
+
+        <!-- 내부 스타일 적용 -->
+        <style>
+            .survey1{ 
+                /* 설문 내용 가운데 정렬 */
+                display: flex;
+                justify-content: center;
+            }
+            #survey{
+                padding: 10px;
+                margin: 10px;
+                width: 800px;
+                height: auto;
+            }
+
+            .box1 h2{
+                font-size: 1.5em;
+                line-height: 0.9em; /* 줄간격 조정*/
+            }
+
+            .box2 {
+                height: auto;
+            }
+
+            fieldset{
+                margin: 15px;
+            }
+
+            input[type=text], input[type=password]{
+                padding: 10px;
+                text-align: center;
+            }
+
+            ul{
+                list-style: none;
+            }
+
+            li{
+                margin: 20px;
+            }
+
+            li label{
+                width: 80px;
+                float: left;
+                font-size: 0.8em;
+                margin-top: 13px;
+                margin-right: -15px;
+            }
+
+            label img{
+                width: 10%;
+                margin-left: 5px;
+                margin-right: 40px;
+            }
+
+            #btn{
+                text-align: center;
+            }
+
+            input[type=submit], input[type=reset]{
+                width: 20%;
+                padding: 8px;
+                border: 0px;
+                background-color: gray;
+                color: white;
+                border-radius: 20px;
+            }
+
+            input[type=submit]{
+                background-color: aquamarine;
+                color: blue;
+            }
+
+        </style>
+    </head>
+    <body>
+        <!-- 시멘틱 태그 작성 -->
+        <!-- 제목 영역 -->
+        <header>
+            <!-- 사진 영역 -->
+            <div>
+                <img src="img/IMG_7151.JPG" width="110">
+            </div>
+
+            <!-- 제목 이름 영역 -->
+            <div>
+                <h1>KIM NAHYEON</h1>
+                <p>김나현</p>
+            </div>
+        </header>
+
+        <!-- 메뉴 영역 - 네비게이션 영역 -->
+        <nav>
+            <a href="index.html">[개인정보]</a> &nbsp;&nbsp;&nbsp;
+            <a href="index.html#s2">[학력사항]</a> &nbsp;&nbsp;&nbsp;
+            <a href="index.html#s3">[자격사항]</a> &nbsp;&nbsp;&nbsp;
+            <a href="index.html#s4">[자기소개]</a> &nbsp;&nbsp;&nbsp;
+            <a href="survey.html">[설문조사]</a> &nbsp;&nbsp;&nbsp;
+        </nav>
+
+        <!-- 설문 영역 -->
+        <div class="survey1">
+            <section id="survey">
+                <form name="myForm" method="get" action="">
+                    <!-- 제목 영역 -->
+                    <div class="box1"> 
+                        <h2>당신이 좋아하는 과일을 선택해 보세요.</h2>
+                    </div>
+    
+                    <!-- 설문 입력 영역 -->
+                   
+                    <div class="box2">
+                        <!-- 개인정보 -->
+                        <!-- fieldset 자동으로 박스 만들어서 나눠줌 -->
+                        <fieldset>
+                            <legend>개인정보</legend>
+                            <ul>
+                                <li>
+                                    <label for="user_name">성명</label>
+                                    <input type="text" name="user_name" id="user_name" placeholder="이름을 입력하세요.">
+                                </li>
+                                <li>
+                                    <label for="user_pw">비밀번호</label>
+                                    <input type="password" name="user_pw" id="user_pw" placeholder="비밀번호를 입력하세요.">
+                                </li>
+                            </ul>
+                        </fieldset>
+    
+                        <!-- 과일 선택 -->
+                        <fieldset>
+                            <legend>좋아하는 과일을 선택하세요.</legend>
+                            <!-- <label>을 이용해서 radio 버튼이랑 img랑 묶음 -> 이미지 선택해도 radio 선택됨 -->
+                            <label>
+                                <input type="radio" name="fruit" id="fruit1" value="딸기">
+                                <img src="img/img1.png">
+                            </label>
+                            <label>
+                                <input type="radio" name="fruit" id="fruit2" value="바나나">
+                                <img src="img/img2.png">
+                            </label>
+                            <label>
+                                <input type="radio" name="fruit" id="fruit3" value="사과">
+                                <img src="img/img3.png">
+                            </label>
+                            <label>
+                                <input type="radio" name="fruit" id="fruit4" value="수박">
+                                <img src="img/img4.png">
+                            </label>
+    
+                        </fieldset>
+                        <br>
+                        <div id="btn">
+                            <input type="submit" value="결과 보기">
+                            <input type="reset" value="취소">
+                        </div>
+                    </div>
+    
+                </form>
+    
+            </section>
+        </div>
+ 
+
+
+        <!-- 꼬리말 영역 -->
+        <footer>
+            <p>&copy; &nbsp;&nbsp; KIMNH AI 활용 빅데이터분석 풀스택서비스 SW 개발자 양성과정</p>
+        </footer>
+        
+    </body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <title>자기소개</title>
+
+        <!-- html 구조 순서대로 스타일 적용 -> 유지보수 할 때 찾기 쉬워야 함 -->
+        <!-- 외부 스타일 적용 -->
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <!-- 시멘틱 태그 작성 -->
+        <!-- 제목 영역 -->
+        <header>
+            <!-- 사진 영역 -->
+            <div>
+                <img src="img/IMG_7151.JPG" width="110">
+            </div>
+
+            <!-- 제목 이름 영역 -->
+            <div>
+                <h1>KIM NAHYEON</h1>
+                <p>김나현</p>
+            </div>
+        </header>
+
+        <!-- 메뉴 영역 - 네비게이션 영역 -->
+        <nav>
+            <a href="#s1">[개인정보]</a> &nbsp;&nbsp;&nbsp;
+            <a href="#s2">[학력사항]</a> &nbsp;&nbsp;&nbsp;
+            <a href="#s3">[자격사항]</a> &nbsp;&nbsp;&nbsp;
+            <a href="#s4">[자기소개]</a> &nbsp;&nbsp;&nbsp;
+            <a href="survey.html">[설문조사]</a> &nbsp;&nbsp;&nbsp;
+        </nav>
+
+        <!-- 개인정보 내용 영역 -->
+        <section id="s1">
+          
+
+            <!-- 세부 내용 영역-->
+            <div>
+                <h1 id="g1">개인정보</h1>
+                    <ol>
+                        <li>
+                            <span class="material-icons">
+                                face
+                            </span>
+                            김나현
+                        </li>
+                        <li>
+                            <span class="material-icons">
+                                smartphone
+                            </span>
+                            010.2785.1124
+                        </li>
+                        <li>
+                            <span class="material-icons">
+                                mail
+                            </span>
+                            durlsg531@naver.com
+                        </li>
+                        <li>
+                            <span class="material-icons">
+                                home
+                            </span>
+                            부산 동래구
+                        </li>
+                    </ol>
+            </div>
+        </section>
+
+        <!-- 학력사항 내용 영역-->
+        <section id="s2">
+            <div>
+                <h1 id="g2">학력사항</h1>
+                <table>
+                    <caption>학력사항</caption>
+                    <thead>
+                        <tr>
+                            <th>출신학교</th>
+                            <th>전공</th>
+                            <th>기간</th>
+                            <th>구분</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                           <td>대학교</td> 
+                           <td>경영</td>
+                           <td></td>
+                           <td>졸업</td>
+                        </tr>
+                        <tr>
+                            <td>고등학교</td>
+                            <td></td>
+                            <td></td>
+                            <td>졸업</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- <ul>
+                    <li>부산외국어대학교 경영전공 졸업</li>
+                    <li>경남여자고등학교 졸업</li>
+                    <li>동평여자중학교 졸업</li>
+                    <li>부암초등학교 졸업</li>
+                </ul> -->
+            </div>
+        </section>
+
+        <!-- 자격사항 내용 영역 -->
+        <section id="s3">
+            <div>
+                <h1 id="g3">자격사항</h1>
+                <ul>
+                    <li>정보처리기사 (예정)</li>
+                    <li>운전면허 1종 (예정)</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- 자기소개 내용 영역 -->
+        <section id="s4">
+            <div>
+                <h1 id="g4">자기소개</h1>
+                <p id="p1">
+                    안녕하세요. 김나현입니다. <br>
+                    비전공자이지만 앞으로 잘 따라갈 수 있도록 노력하겠습니다.
+                </p>
+            </div>    
+        </section>
+
+        <!-- 꼬리말 영역 -->
+        <footer>
+            <p>&copy; &nbsp;&nbsp; KIMNH AI 활용 빅데이터분석 풀스택서비스 SW 개발자 양성과정</p>
+        </footer>
+        
+    </body>
+</html>

@@ -1,0 +1,110 @@
+* {
+    font-family: "맑은 고딕";
+}
+a:link{
+    color: black;
+    text-decoration: none;
+    font-size: 13px;
+}
+a:hover{
+    background-color: white;
+    color: rgb(151, 216, 194);
+}
+header div{
+    /* header 자체를 정렬하는것이 아님. header는 영역
+    그 안의 div를 정렬해야 함
+    section도 영역. 근데 이게 정렬된 이유는 여러개 있었으니까
+    header는 한개 있는데 정렬이 안됨*/
+    float: left;
+}
+header p {
+    font-size: 20px;
+}
+header{
+    /* 따로 높이 지정해줘야 함
+    float 지정하면 위로 둥둥떠서 높이가 없어진 만큼 영역이 사라지게 됨*/
+    height: 150px;
+}
+nav{
+    clear: both;
+}
+section{
+    /* float: left; */
+    width: 45%;
+    height: auto;
+}
+footer{
+    clear: both;
+}
+#s1 ol{
+    list-style-type: none;
+    margin-left: -15px;
+}
+
+header,footer{
+    padding: 20px;
+    background-color: rgb(151, 216, 194);
+    text-align: center;
+    color: white;
+}
+nav{
+    padding: 15px;
+    background-color: rgb(197, 245, 229);
+    font-weight: bold;
+    /* text-align: center; */    
+}
+section{
+    font-size: 15px;
+    color: gray;
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    height: auto;
+    border-bottom: 1px dotted #b5b7b8;
+}
+#g1, #g2, #g3, #g4 {
+   border: solid;
+   border-width: 0px 0px 0px 7px;
+   padding: 10px;
+   margin-top: 10px;
+}
+#g1 {
+    border-color: blue;
+}
+#g2 {
+    border-color: rgb(170, 170, 223);
+}
+#g3 {
+    border-color: skyblue;
+}
+#g4 {
+    border-color: rgb(51, 106, 128);
+}
+#p1{
+    color: green;
+    padding: 20px;
+}
+img{
+    margin: 30px;
+}
+
+/*.c1, .c2 => class인 경우*/
+
+/* 학력사항 표 */
+table{
+    width: 70%;
+    border: solid 1px black;
+    border-collapse: collapse; /* 중복되는 표와 셀의 테두리를 한줄로 만듦*/
+}
+td, th{
+    border: solid 1px gray;
+    padding: 10px; /* 표에는 padding 주는 것이 가독성 좋음*/
+    font-size: 0.8em;
+    text-align: center;
+}
+thead{
+    background-color: beige;
+}
+caption{
+    padding-bottom: 20px;
+}
